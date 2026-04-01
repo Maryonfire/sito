@@ -1,0 +1,127 @@
+@charset "UTF-8";
+
+body{
+    background-color: black;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat; /*non ripete più volte*/
+    font-family: 'Montserrat', sans-serif;
+    display: flex; /*usa flexbox*/
+    flex-direction: column; /*elementi in colonna*/
+}
+
+/*stile della riga superiore*/
+nav{
+    top: 0; /*attaccato al bordo superiore della pagina*/
+    position: fixed; /*rimane fisso nella pagina*/
+	background-color: rgba(0, 30, 77, 0.9); /*colore blu notte trasparente*/
+	padding: 15px 25px; /*aggiunge spazio tra i link*/
+	display: flex; /*elementi in riga*/
+	gap: 20px; /*distanza tra un link e l'altro*/
+	z-index: 1000; /*rimane sempre in cima*/
+}
+
+nav a{
+  color: white; /* Rende le scritte bianche */
+  text-decoration: none; /* Toglie la sottolineatura*/
+  font-weight: bold; /* Le rende più spesse */
+}
+
+/*stile del banner*/
+.banner {
+  background-color: rgba(0, 30, 77, 0.8);
+  background-size: cover;      /*L'immagine copre tutto il banner */
+  background-position: center; /* Centro l'immagine nel banner */
+  padding: 80px 20px;
+  color: white; /*colore testo*/
+  position: relative; /*per la ragnatela*/
+}
+
+/*stile della parola Mary*/
+.banner h1{
+    position: relative;
+	font-family: 'Bitcount', normal;
+	font-size: 6em; /*dimensione*/
+	transition: transform 0.3s;
+	margin 0;
+}
+
+.banner h1:hover {
+  transform: translateX(10px); /* Sposta a destra al passaggio del mouse */
+  color: #f1c40f; /* Il nome diventa giallo oro passandoci sopra! */
+}
+
+.banner p{
+    transition: transform 0.3s;
+}
+
+.banner p:hover {
+  transform: translateX(10px); /* Sposta a destra al passaggio del mouse */
+  color: #f1c40f; /* la scritta diventa giallo oro passandoci sopra! */
+}
+
+.ragnatela {
+    position: absolute;
+    top: 0;      /* Attaccata al bordo superiore */
+    right: 0;    /* Attaccata al bordo destro */
+    width: 200px; /* grandezza */
+    height: auto;
+    transform-origin: top right; /* Punto di rotazione: angolo alto destro */
+    transition: transform 0.5s ease-in-out; /* Transizione*/
+}
+
+.ragnatela:hover {
+    transform: rotate(15deg); /* Ruota di 15 gradi al passaggio del mouse */
+}
+
+.spiderman1 {
+    width: auto; /* grandezza */
+    height: auto;
+    margin-left: 100px; /* posiziona a sinistra*/
+    margin-right: auto;
+    animation: fluttua 2s ease-in-out infinite; /*animazione su e giù continua*/
+}
+
+.spiderman2{
+    float: right;
+    width: 600px;
+    height: auto;
+    margin-right: 1px; /* posiziona a destra con distanza dal margine*/
+    margin-left: auto;
+    animation: fluttua 2s ease-in-out infinite; /*animazione su e giù continua*/
+}
+
+.spiderman3{
+    float: right;
+    width: 750px;
+    height: auto;
+    margin right: 30px;
+    margin-left: auto;
+    animation: fluttua 2s ease-in-out infinite; /*animazione su e giù continua*/
+}
+
+/*animazione spiderman3 su e giù*/
+@keyframes fluttua {
+    0% {
+        transform: translateY(0); /*posizione iniziale*/
+    }
+    50% {
+        transform: translateY(-20px); /*sale di 20px*/
+    }
+    100% {
+        transform: translateY(0); /*torna alla posizione iniziale*/
+    }
+}
+
+/*stile del footer*/
+footer{
+    background-color: rgba(0, 30, 77, 0.9); /*colore blu notte trasparente*/
+    width: 100%; /*occupa tutta la larghezza*/
+    padding: 10px; /*spazio interno*/
+    text-align: center; /*testo centrato*/
+    color: white; /*colore del testo bianco*/
+    margin-top: auto; /*spinge il footer in fondo*/
+}
+
+
+
