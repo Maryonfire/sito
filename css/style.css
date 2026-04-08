@@ -53,6 +53,7 @@ nav a{
 
 .banner p{
     transition: transform 0.3s;
+    font-size: 1.5em; /*dimensione scritta*/
 }
 
 .banner p:hover {
@@ -123,5 +124,77 @@ footer{
     margin-top: auto; /*spinge il footer in fondo*/
 }
 
+.foto-profilo {
+    width:300px;
+    height: auto;
+    margin-left:3px;
+    border-radius:20px; /* mette i bordi arrotondati */
+    animation: fluttua2s ease-in-out infinite;
+}
 
+.profilo {
+    display: flex;          /* Mette gli elementi uno accanto all'altro */
+    gap: 40px;              /* Crea lo spazio tra la foto e il testo */
+    padding: 20px;
+}
 
+/*box info a destra della foto*/
+.info-profilo {
+    background-color: rgba(0,30,77,0.9); /* blu notte */
+    color: white;
+    padding:25px; /*per avere le parole distanti dal bordo del riquadro */
+    border-radius:15px;
+    max-width:500px;
+}
+
+.info-profilo h2 {
+    font-family: 'Bitcount', normal;
+    margin-top:0;
+    margin-bottom:15px;
+    font-size:1.8em;
+    transition: transform 0.3s;
+}
+
+.info-profilo h2:hover {
+    transform: translateX(10px); /* Sposta a destra al passaggio del mouse */
+    color: #f1c40f; /* Il nome diventa giallo oro passandoci sopra! */
+}
+
+.info-profilo p {
+    font-size:1.1em;
+}
+
+.info-profilo ul {
+    font-size:1.1em;
+    padding:20px;
+}
+
+.spider-gwen {
+    width: auto;
+    height: 400px;
+    animation: fluttua 2s ease-in-out infinite;
+}
+
+.sezione-contatti {
+    display: inline-flex;
+    justify-content: space-around; /*spazio tra immagini*/
+    padding: 50px 20px;
+    max-width: 300px;
+}
+
+.github img{
+    margin-left: 1px;
+    width:300px;
+    height: auto;
+}
+
+.instagram img{
+    width:300px;
+    height: auto;
+    margin-right: 30px
+}
+
+.email img{
+    width:400px;
+    height: auto;
+}
